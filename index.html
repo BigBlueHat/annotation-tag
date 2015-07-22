@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.12.7/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.10/vue-resource.min.js"></script>
+  <meta charset="utf-8">
+  <title>Hypothesis Annotation Widget</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="create-form">
+  <input type="url" v-model="url" placeholder="URL of an annotation"
+         value="https://hypothes.is/api/annotations/Kw4GxoV8QI-tudW02qbsmQ" />
+  <button v-on="click: addUrl">add</button>
+  </div>
+  
+<annotation href="https://hypothes.is/api/annotations/Gk_TW9d_SyCG5cFH4UCy9A"></annotation>
+
+<template id="annotation-template">
+  <aside v-if="annotation.id" vocab="http://www.w3.org/ns/oa#" typeof="Annotation" about="https://hypothes.is/a/{{annotation.id}}">
+  <header>
+  <a property="annotatedBy" href="https://hypothes.is/u/{{username}}">{{username}}</a>
+on <a property="hasTarget" typeof="SpecificResource" href="{{target.source}}">
+    <span property="hasSelector" typeof="TextQuoteSelector" resource="#quote"></span>
+    {{annotation.document.title}}
+    </a>
+  </header>
+<blockquote id="quote" about="#quote" cite="{{target.source}}"><span property="exact">{{quote}}</span></blockquote>
+  <section property="hasBody">
+  <p>{{annotation.text}}</p>
+  </section>
+</aside>
+</template>
+</body>
+</html>
