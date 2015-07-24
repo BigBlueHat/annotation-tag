@@ -1,0 +1,31 @@
+{
+  "name": "annotation-tag",
+  "version": "0.0.2",
+  "description": "A custom HTML tag for adding annotation references to HTML",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/browserify -e index.js -o dist/annotator-tag.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigBlueHat/annotation-tag.git"
+  },
+  "keywords": [
+    "annotation",
+    "html"
+  ],
+  "author": "BigBlueHat <byoung@bigbluehat.com>",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/BigBlueHat/annotation-tag/issues"
+  },
+  "homepage": "https://github.com/BigBlueHat/annotation-tag",
+  "dependencies": {
+    "vue": "^0.12.7",
+    "vue-resource": "^0.1.10"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "partialify": "^3.1.5"
+  }
+}

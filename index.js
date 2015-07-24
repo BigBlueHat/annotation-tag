@@ -1,3 +1,6 @@
+var Vue = require('vue');
+require('vue-resource')(Vue);
+
 var annotation_component = {
   template: '#annotation-template',
   props: ['href'],
@@ -50,7 +53,7 @@ var annotation_component = {
 };
 
 var app = new Vue({
-  el: 'body',
+  el: document.body,
   data: {
     url: '',
     urls: []

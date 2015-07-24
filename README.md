@@ -29,6 +29,14 @@ Annotation Data Model (soon to be
 - it's ugly
 - it only works with JSON content from `http://hypothes.is/api/` (for now)
 
+## Build Instructions
+
+```
+$ npm install
+$ npm run build
+$ open index.html # works on Macs...otherwise just open the file...
+```
+
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
